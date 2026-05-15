@@ -1,0 +1,452 @@
+.roulette{
+    background-image: url("pics/newredcasinoback.png");
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    overflow: hidden;
+}
+
+.rouletteGameContainer {
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 3vh;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+}
+
+.bigPlateauContainer {
+    height: 100%;
+    width: 27%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+    padding-top: 5vh;
+}
+
+
+.plateauContainer {
+    bottom: 10%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    top: 0ch;
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    color: white;
+    padding-bottom: 5vh;
+}
+
+
+.numberContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.oneTo36Number {
+    flex: 1;
+    width: 100%;
+    max-height: 7vh;
+    color: #fff;
+    border: 3px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100%;
+    cursor: pointer;
+    background-color: rgb(193, 76, 76);
+}
+
+.numberZero {
+    width: 25.95vw;
+    height: 10vh;
+    background-color: #31b358;
+    border: 3px solid #ccc;
+    display: flex;
+    align-items: center;
+    max-height: 7vh;
+    justify-content: center;
+    font-size: 100%;
+    cursor: pointer;
+    /* width: 6.26ch; */
+    /* transform: translateX(2.1ch); */
+}
+
+.douzaine {
+    flex: 1;
+    border: 3px solid #ccc;
+    align-items: center;
+    justify-content: center;
+    font-size: 100%;
+    cursor: pointer;
+    display: flex;
+}
+
+
+.exterior {
+    flex: 1;
+    display: flex;
+    border: 3px solid #ccc;
+    align-items: center;
+    justify-content: center;
+    font-size: 80%;
+    cursor: pointer;
+}
+
+
+.red {
+    background-color: rgb(193, 76, 76);
+}
+
+.black {
+    background-color: rgb(19, 17, 17);
+}
+
+
+.coin {
+    width: 100%;
+    height: 100%;
+}
+
+.popupContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenu-popup {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 300px;
+    background-image: url("pics/pokerbackgroud.jpg");
+    background-size: fill;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-color: black;
+}
+
+
+.inputMoney {
+    background-color: cadetblue;
+    border-radius: 10px;
+    height: 70px;
+    width: 240px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.textMoney {
+    color: black;
+    font-size: 40vh;
+}
+
+.moneyContainer {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 200%;
+    width: 10%;
+    height: 10%;
+    background-color:  rgb(177,129,141);
+    border-radius: 19px;
+    display: flex; /* Utilise Flexbox pour le layout */
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: center; /* Centre horizontalement le contenu */
+    padding: 0; /* Ajustez selon le besoin, mais pour le centrage, le padding pourrait ne pas être nécessaire */
+}
+
+
+.rouletteContainer {
+    padding-top: 10vh;
+    /* padding-left: 10vh; */
+    /* padding-right: 20vh; */
+    position: relative;
+    right: 17ch;
+    bottom: 3vh;
+    max-height: 17vh;
+}
+
+.spinning {
+    margin-top: 5vh;
+    height: 70vh;
+    width: 70vh;
+    border-radius: 50%;
+    animation: rotate 6s 1;
+}
+
+.notSpinning {
+    margin-top: 5vh;
+    height: 70vh;
+    width: 70vh;
+    border-radius: 50%;
+}
+
+.notSpinning::before {
+    content: '';
+    position: absolute;
+    left: 46.4%;
+    margin-top: 13%;
+    width: 0;
+    height: 0;
+    border-left:  1vw solid transparent; /* Vous pouvez ajuster la largeur du triangle ici */
+    border-right:  1vw solid transparent; /* Vous pouvez ajuster la largeur du triangle ici */
+    border-top: 3vh solid #d2d513; 
+}
+
+.notSpinning::after {
+    content: '';
+    position: absolute;
+    left: 46.4%;
+    margin-top: 13%;
+    width: 0;
+    height: 0;
+    border-left:  1vw solid transparent; /* Vous pouvez ajuster la largeur du triangle ici */
+    border-right:  1vw solid transparent; /* Vous pouvez ajuster la largeur du triangle ici */
+    border-top: 3vh solid #d2d513; 
+}
+
+
+
+.spinning::before {
+    content: '';
+    position: absolute;
+    left: 46.4%;
+    margin-top: 13%;
+    width: 0;
+    height: 0;
+    border-left:  1vw solid transparent; /* Vous pouvez ajuster la largeur du triangle ici */
+    border-right:  1vw solid transparent; /* Vous pouvez ajuster la largeur du triangle ici */
+    border-top: 3vh solid #d2d513; 
+}
+
+
+.spinning::after {
+    content: '';
+    position: absolute;
+    left: 46.4%;
+    margin-top: 13%;
+    width: 0;
+    height: 0;
+    border-left:  1vw solid transparent; /* Vous pouvez ajuster la largeur du triangle ici */
+    border-right:  1vw solid transparent; /* Vous pouvez ajuster la largeur du triangle ici */
+    border-top: 3vh solid #d2d513; 
+}
+
+
+
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+}
+
+
+.result {
+    width: 50%;
+    height: 10%;
+}
+
+.popup {
+    position: fixed;
+    top: 10px;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    background-color: #31b358;
+    color: hwb(0 0% 100%);
+    padding: 20px;
+    text-align: center;
+    width: 20%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s ease-out forwards;
+    display: none;
+    font: bold;
+    font-size: 40px;
+    z-index: 1;
+}
+
+.popup.visible {
+    display: block;
+}
+
+.popup.visible.red {
+    background-color: rgb(193, 76, 76);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.btn-close {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 5ch;
+    right: 1ch;
+    padding: 10px;
+    opacity: 0.33;
+    transition: opacity 0.5s ease;
+}
+
+.message-container {
+
+    position: relative;
+    max-width: 300px;
+    /* Ajustez la largeur selon vos besoins */
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #ccc;
+    overflow-y: scroll;
+    max-height: 300px;
+    /* Ajustez la hauteur selon vos besoins */
+    min-height: 80px;
+}
+
+.serverText {
+    background-color: yellow;
+    opacity: 0.6;
+}
+
+
+.inputMessage {
+    width: 80%;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.messageButton {
+    border-radius: 30%;
+    border: 2px solid #000;
+    font-size: 2vh;
+    text-align: left;
+    background-color: #536658;
+}
+
+
+/* .vertical-line {
+    position: relative;
+    width: 0;
+    height: 0;
+    left: 32.7vh;
+    top: 10ch;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 100px solid #000;
+    margin-left: 10px;
+    z-index: 1;
+} */
+
+.rou-timer {
+    position: absolute;
+    top: 5%;
+    left: 17%;
+    background: linear-gradient(145deg, rgba(128, 0, 32, 0.9), rgba(64, 0, 16, 0.9)); /* Gradient pour un effet plus profond */
+    color: #FFD700; /* Or pour le texte, rappelant les couleurs du casino */
+    border: 2px solid #FFD700; /* Bordure dorée */
+    border-radius: 10px;
+    padding: 15px 25px; /* Un peu plus de padding pour un look plus riche */
+    font-weight: bold;
+    font-size: 20px; /* Taille de police légèrement augmentée pour l'importance */
+    text-shadow: 0px 0px 2px #ffd700b3; /* Ombre de texte dorée pour un effet brillant */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre portée plus prononcée pour un effet 3D */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ro-leave {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5; /* Légère visibilité pour un look discret */
+    transition: opacity 0.3s ease; /* Transition douce pour l'opacité */
+}
+
+.ro-leave:hover {
+    opacity: 0.7;
+}
+
+.ro-bye-button {
+    padding: 10px 20px; /* Confort de clic */
+    background-color: #541616; /* Couleur de fond neutre */
+    color: #683232; /* Couleur de texte légère pour un contraste subtil */
+    border-radius: 5px; /* Bords arrondis pour un look moderne */
+    font-size: 100%; 
+    cursor: pointer; 
+    width: 5vw;
+    height: 5vh;
+    text-align: center;
+}
+
+.ro-bye-button:hover {
+    background-color: #636363; /* Assombrissement au survol pour indiquer l'interaction */
+    color: #ffffff; /* Texte plus clair pour le contraste */
+}
+
+.rou-music {
+    z-index: 1000; /* Assure que le bouton reste au-dessus des autres éléments */
+    box-sizing: border-box;
+    position: fixed; /* Fixe le bouton dans la fenêtre de visualisation */
+    bottom: 20px; /* Positionnement en bas à gauche avec un peu d'espace */
+    left: 20px;
+    padding: 10px 20px; /* Espacement intérieur pour rendre le bouton plus grand et plus cliquable */
+    font-size: 16px; /* Taille de la police pour que le texte soit clairement lisible */
+    background-color: #8B0000; /* Un rouge profond pour un look casino luxueux */
+    color: #FFD700; /* Couleur dorée pour le texte, évoquant le luxe */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 5px; /* Bordures légèrement arrondies pour un look moderne */
+    cursor: pointer; /* Change le curseur en main pour indiquer qu'il s'agit d'un bouton cliquable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre portée pour un effet 3D subtil */
+    transition: background-color 0.3s, transform 0.2s; /* Transition pour l'interaction */
+  }
+  
+  .rou-music:hover {
+    background-color: #640000; /* Assombrir le bouton au survol pour le feedback */
+    transform: translateY(-2px); /* Effet de léger soulèvement au survol */
+  }
+  
+  .rou-music:active {
+    transform: translateY(1px); /* Simule un effet de pression sur le bouton */
+  }
+  
+
+ 

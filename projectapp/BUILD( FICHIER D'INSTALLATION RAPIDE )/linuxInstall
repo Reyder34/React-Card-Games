@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo $(pwd)
+cd ..
+echo $(pwd)
+npm install react-scripts -f
+echo $(pwd)
+cd "BUILD( FICHIER D'INSTALLATION RAPIDE )"
+echo $(pwd)
+chmod +x linuxQuickStart
+./linuxQuickStart

@@ -1,0 +1,605 @@
+.six-container {
+    position: relative;
+    background-color: rgb(13, 13, 50);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.adverse-players {
+    padding-left: 3%;
+    display: flex;
+    
+}
+
+.opponent-six {
+    height: 70%;
+    width: 500%;
+    border-radius: 8px;
+    margin: auto;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    font-size: 2vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-color: rgb(119, 138, 193);
+    top: 10px;
+    justify-content: center;
+    display: block;
+    margin-right: 10px;
+    align-items: center;
+    position: relative;
+    padding-bottom: 2px
+}
+
+.bot-opponent-six {
+    background-color: rgb(26, 154, 22); 
+    padding-left: 17%; 
+    padding-bottom: 2px;
+
+}
+
+.adverse-players .opponent-six.bot-opponent-six {
+    background-color: rgb(26, 154, 22); /* More specific selector */
+    padding-left:17% ;
+}
+
+
+.bot-image {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 10px; 
+    top: 50%;
+    transform: translateY(-50%); 
+
+}
+
+
+
+.sqp-upperBandeau {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 15%;
+    background-color: rgb(12, 30, 42);
+}
+
+.card-sqp {
+    height: 11vh;
+    width: 3.5vw;
+    margin-right: 3vw;
+    background-color: transparent;
+    font-size: 80%;
+}
+
+.sqp-gameContainer {
+    position: fixed;
+    top:15%;
+    bottom: 20%;
+    width: 100%;
+    height: 70%;
+    background-color: rgb(26, 42, 53);
+    display: flex;
+}
+
+.sqp-cardContianer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    background-color: rgb(7, 24, 36);
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 0;
+    border-radius: 15px;
+    max-height: 20vh;
+    width: calc(100% - 10vw); /* Ajustez selon la largeur désirée */
+    right: 0; /* Centrage avec un peu de marge */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacement entre les éléments enfants */
+    overflow: hidden; /* Empêche le débordement du contenu */
+}
+
+.sqp-message-container {
+    overflow-y: auto;
+    max-height: 10vh; /* Laissez de l'espace pour l'input en bas */
+    margin-bottom: 5px; /* Espacement au-dessus de l'input */
+}
+
+.inputMessage {
+    width: 100%; /* Assurez-vous que l'input utilise toute la largeur disponible */
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    box-sizing: border-box; /* Inclut padding dans la largeur */
+}
+
+
+
+#chatContainer {
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+
+
+
+
+.opponent-six.hisTurn {
+    box-shadow: rgb(60, 255, 0) 0px 0px 20px;
+}
+
+.opponent-six:nth-child(1) {
+    left: 10%;
+}
+
+.opponent-six:nth-child(2) {
+    left: 20%;
+}
+
+.opponent-six:nth-child(3) {
+    left: 30%;
+}
+
+.opponent-six:nth-child(4) {
+    left: 40%;
+}
+
+.opponent-six:nth-child(5) {
+    left: 50%;
+}
+
+.opponent-six:nth-child(6) {
+    left: 60%;
+}
+
+.opponent-six:nth-child(7) {
+    left: 70%;
+}
+
+.opponent-six:nth-child(8) {
+    left: 80%;
+}
+
+.opponent-six:nth-child(9) {
+    left: 90%;
+}
+
+.sqp-card-holder {
+    width: max-content;
+    bottom: 1;
+    position: fixed;
+    left: 50%;
+    width: 50%;
+    transform: translateX(-50%); /* Centre l'élément horizontalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('pics/9999520.jpg');
+    margin: 0 auto;
+    max-height: 100%;
+    min-height: 15%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), rgb(60, 255, 0) 0px 0px 100px; /* Fusion des deux déclarations box-shadow en une seule */
+}
+
+
+.card:hover {
+    transform: translateY(-10%);
+}
+
+.sqp-card {
+    position: relative;
+    bottom: 0;
+    background-color: transparent;
+    width: 20%;
+    height: 80%;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sqp-card-holderNYT {
+    width: max-content;
+    bottom: 1;
+    position: fixed;
+    left: 50%;
+    width: 50%;
+    transform: translateX(-50%); /* Centre l'élément horizontalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('pics/9999520.jpg');
+    margin: 0 auto;
+    max-height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), rgb(213, 40, 40) 0px 0px 100px;
+}
+
+.notYourTurn-cards {
+    position: relative;
+    bottom: 70px;
+    transform: translateY(50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreboard {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    /* Votre style pour le tableau de scores */
+}
+
+.rectangle-container {
+    display: flex;
+    flex-direction: column;
+    top: 5vh;
+    left: 10vh;
+    margin-top: 2vh;
+    margin-left: 1vh;
+    /* padding-bottom: 8vh; */
+}
+
+.rectangle {
+    width: 65vh;
+    height: 14.5vh;
+    background-color: rgb(72, 84, 94);
+    border: solid 2px gray;
+    background-size: contain;
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding-top: 0.5vh;
+    padding-left: 1vh;
+    box-shadow: 0 0 20px black;
+}
+
+
+.row {
+    position: absolute;
+    top: 130px;
+    /* Ajustez selon la hauteur du timer */
+    left: 20px;
+    /* Alignez avec le timer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    margin-top: 5px;
+    /* Espace entre les boutons */
+    padding: 5px 10px;
+    /* Réduire la taille des boutons */
+    font-size: 12px;
+    /* Taille de texte plus petite pour les boutons */
+}
+
+.scoreboard {
+    position: fixed;
+    top: 40%;
+    right: -250px;
+    /* Cache le contenu à l'extérieur de la vue, garde l'onglet visible */
+    transform: translateY(-50%);
+    width: 300px;
+    /* Largeur totale du scoreboard, incluant l'onglet */
+    height: 200px;
+    /* Hauteur du scoreboard */
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    transition: right 0.5s;
+    /* Anime le mouvement latéral */
+    display: flex;
+}
+
+.scoreboard-tab {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    width: 50px;
+    /* Largeur de l'onglet */
+}
+
+.scoreboard-content {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.scoreboard.visible {
+    right: 0;
+    /* Ramène le scoreboard dans la vue */
+}
+
+.waitingCards {
+    border-spacing: 5px;
+    display: flex;
+    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    width: 500px;
+    height: 400px;
+    right: 25ch;
+    top: 30vh;
+    flex-wrap: wrap;
+    background-size: cover;
+    margin-left: 10%;
+    margin-top: 3%;
+    background-image: url('pics/9999520.jpg');
+}
+
+img {
+    max-width: 110%;
+
+    /* ou */
+    object-fit: contain;
+    /* ou "contain", selon le comportement souhaité */
+}
+
+.timer {
+    margin-top: 2vh;
+    margin-left: 2vh;
+    width: 4vw;
+    height: 8vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(123, 59, 59);
+    border: 1px solid #ccc;
+    font-size: 4VH;
+}
+
+.sqp-timer {
+    position: fixed; /* Positionne le timer de manière fixe par rapport au viewport */
+    bottom: 20vh; /* Position verticale depuis le haut du viewport */
+    left: 50vw; /* Centre horizontalement par rapport au viewport */
+    transform: translateX(-50%); /* Ajuste le positionnement pour un centrage parfait */
+    background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond semi-transparente pour le contraste */
+    color: #333; /* Couleur du texte */
+    padding: 1vh 2vw; /* Espacement interne basé sur la taille du viewport */
+    font-size: 3vh; /* Taille de la police relative à la hauteur du viewport */
+    border-radius: 10px; /* Coins arrondis pour un look doux */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre subtile pour de la profondeur */
+    z-index: 100; /* Assure que le timer est bien visible au-dessus des autres éléments */
+}
+
+.sqp-timer p {
+    margin: 0; /* Retire les marges par défaut pour un alignement parfait */
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+
+.sqp-save-button {
+    position: fixed; /* Fixe le bouton par rapport au viewport */
+    bottom: 12vh; /* Positionne le bouton à 5% de la hauteur du haut du viewport */
+    left: 2vw; /* Positionne le bouton à 5% de la largeur du côté droit du viewport */
+    padding: 1vh 2vw; /* Utilise vh et vw pour le padding pour une adaptabilité */
+    background-color: #3db020; /* Une couleur rouge pour indiquer une action de sortie/quitter */
+    color: white; /* Couleur du texte */
+    font-size: 2vh; /* Adapte la taille de la police à la hauteur du viewport */
+    text-align: center; /* Centre le texte dans le bouton */
+    border-radius: 5px; /* Arrondit les coins du bouton */
+    cursor: pointer; /* Change le curseur pour indiquer qu'il est cliquable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une petite ombre pour un effet en relief */
+    transition: background-color 0.3s, transform 0.2s; /* Transition pour hover */
+}
+
+.sqp-save-button:hover {
+    background-color: #07550f; /* Assombrit le bouton au survol pour un feedback */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+.sqp-exit-button {
+    z-index: 1000;
+    position: fixed; /* Fixe le bouton par rapport au viewport */
+    bottom: 5vh; /* Positionne le bouton à 5% de la hauteur du haut du viewport */
+    left: 2vw; /* Positionne le bouton à 5% de la largeur du côté droit du viewport */
+    padding: 1vh 2vw; /* Utilise vh et vw pour le padding pour une adaptabilité */
+    background-color: #f44336; /* Une couleur rouge pour indiquer une action de sortie/quitter */
+    color: white; /* Couleur du texte */
+    font-size: 2vh; /* Adapte la taille de la police à la hauteur du viewport */
+    text-align: center; /* Centre le texte dans le bouton */
+    border-radius: 5px; /* Arrondit les coins du bouton */
+    cursor: pointer; /* Change le curseur pour indiquer qu'il est cliquable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une petite ombre pour un effet en relief */
+    transition: background-color 0.3s, transform 0.2s; /* Transition pour hover */
+}
+
+.sqp-exit-button:hover {
+    background-color: #d32f2f; /* Assombrit le bouton au survol pour un feedback */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+
+.closeButton {
+    z-index: 10000;
+    position: absolute; /* Positionnement par rapport au conteneur parent */
+    top: 10px; /* Positionnement en haut à droite */
+    right: 10px;
+    cursor: pointer; /* Indique un élément cliquable */
+    padding: 5px 8px; /* Espacement autour du texte pour faciliter le clic */
+    font-size: 20px; /* Taille suffisamment grande pour être facilement cliquable */
+    color: #ffffff; /* Couleur discrète mais visible */
+}
+
+/* Assurez-vous que le reste de votre CSS est inchangé */
+.chat-container{
+    width: 20%;
+}
+
+/* Style général du pop-up de sauvegarde */
+.savePopUp {
+    position: fixed; /* Fixe le pop-up au-dessus du contenu de la page */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centre le pop-up */
+    width: 90%; /* Adaptabilité à la taille de l'écran */
+    max-width: 400px; /* Largeur maximale pour les grands écrans */
+    padding: 20px;
+    background-color: #263b2e; /* Fond blanc pour la clarté */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile pour le relief */
+    border-radius: 10px; /* Bordures arrondies pour la modernité */
+    z-index: 1000; /* S'assure que le pop-up reste au-dessus des autres éléments */
+}
+
+.titlePopUp {
+    margin: 0 0 20px 0; /* Espacement au-dessus et en dessous du titre */
+    font-size: 18px; /* Taille de police appropriée */
+    text-align: center; /* Centrage du titre */
+    color: #ffffff; /* Couleur de texte sobre */
+}
+
+.inputPopup {
+    width: 100%; /* Utilise toute la largeur disponible */
+    padding: 10px; /* Padding intérieur pour faciliter la saisie */
+    margin-bottom: 20px; /* Espacement avant le bouton */
+    border: 1px solid #ccc; /* Bordure discrète */
+    border-radius: 5px; /* Bordures légèrement arrondies */
+    box-sizing: border-box; /* S'assure que le padding ne change pas la largeur */
+}
+
+.saveButtonPopUp {
+    display: block; /* Assure que l'élément est traité comme un bloc */
+    width: 100%; /* Largeur totale pour attirer l'attention */
+    padding: 10px 0; /* Padding vertical */
+    background-color: #4CAF50; /* Couleur verte pour l'action de sauvegarde */
+    color: #ffffff; /* Texte blanc pour le contraste */
+    text-align: center; /* Centrage du texte */
+    border-radius: 5px; /* Bordures arrondies */
+    cursor: pointer; /* Indique un élément cliquable */
+    transition: background-color 0.3s; /* Transition douce pour le survol */
+}
+
+.saveButtonPopUp:hover {
+    background-color: #45a049; /* Assombrir le bouton au survol pour le feedback */
+}
+
+
+.chat-container {
+    transform: translateY(110%);
+}
+
+.sqp-emote-container {
+    position: fixed;
+    left: 4%;
+    bottom: 5vh;
+}
+
+.sqp-emote-button {
+    height: 6vh;
+    width: 6vw;
+    margin-left: 200%;
+    background-color: #1e4065;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sqp-emote-bubble {
+    left: 10%;
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 0; /* Alignez la bulle d'émoticônes tout à gauche */
+    width: 300px; /* Augmentez la largeur de la bulle d'émoticônes */
+    background-color: rgb(144, 129, 129);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1;
+    white-space: nowrap; /* Empêchez le texte de se retourner à la ligne */
+    overflow-x: auto; /* Ajoutez une barre de défilement horizontale si nécessaire */
+}
+
+.sqp-emote-list {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto; 
+}
+
+.sqp-emote {
+    margin: 5px;
+    cursor: pointer;
+}
+
+.sqp-emote video {
+    width: 60px;
+    height: 60px;
+    border-color: red;
+}
+
+.sqp-emote-enemy video{
+    margin-top: 2px;
+    width: 75px;
+    height: 75px;
+    border-color: red;
+}
+
+.hide-emote {
+    display: none;
+}
+
+
+.sqp-emote-display-container {
+    position: fixed;
+    right: 1%;
+    bottom: 22%;
+    width: 200px; /* Ajusté pour mieux s'adapter au titre */
+    background-color: rgb(67, 103, 182); /* Couleur légèrement ajustée pour le contraste */
+    border-radius: 8px; /* Coins plus arrondis */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour une meilleure distinction */
+    padding: 10px; /* Espacement interne pour le titre et le contenu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sqp-emote-display-title {
+    font-size: 14px; /* Taille adaptée au nouveau container */
+    color: white;
+    text-align: center;
+    margin: 5px 0; /* Ajustement de l'espacement autour du titre */
+}
+
+.sqp-player-emote-container {
+    width: 150px; 
+    height: 100px; 
+    background-color: rgba(87, 123, 202, 0); /* Gardé comme spécifié */
+    border-radius: 2px; /* Gardé comme spécifié */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.sqp-player-emote video {
+    width: 95px;
+    height: 95px;
+}
+
+.sqp-emoteplayer-name {
+    font-size: 2vh;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: white;
+}

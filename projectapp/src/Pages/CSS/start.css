@@ -1,0 +1,51 @@
+.start-container-big {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.start-container-fade-out {
+    background-color: #fff;
+}
+
+.start-button-fade-out {
+    opacity: 0;
+}
+
+.start-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s ease;
+    z-index: 1;
+}
+
+.start-button {
+    padding: 20px 40px;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #8eaccd;
+    color: rgb(0, 0, 0);
+    transition: transform 0.3s ease, opacity 1s ease;
+    z-index: 2;
+    opacity: 1; 
+}
+
+.start-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: fill; 
+}
+
